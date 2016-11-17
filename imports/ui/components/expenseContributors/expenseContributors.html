@@ -1,0 +1,13 @@
+<div style="font-size: large; margin-bottom: 10px;">
+    Contributors:
+</div>
+<ion-list style="margin-top: 5px">
+    <ion-checkbox ng-repeat="user in expenseContributors.users"
+                  ng-model="expenseContributors.contributors[user._id]"
+                  ng-change="expenseContributors.printContributors()"  >
+        {{ user | displayNameFilter }}
+    </ion-checkbox>
+</ion-list>
+<div id="contributors-description">
+    The cost of the expense will be shared evenly between contributors.
+</div>

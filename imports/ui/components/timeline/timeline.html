@@ -1,0 +1,19 @@
+<div class="bar bar-subheader bar-calm">
+    <h1 class="title">Timeline</h1>
+    <div class="buttons">
+        <expense-add></expense-add>
+    </div>
+</div>
+<ion-content class="has-header has-subheader background-color">
+    <div class="col">
+        <div class="row">
+            <debtor-card style="width: 100%"></debtor-card>
+        </div>
+        <div class="row">
+            <creditor-card style="width: 100%"></creditor-card>
+        </div>
+        <div class="row" ng-repeat="expense in timeline.expenses">
+            <expense-card expense="expense" style="width: 100%"></expense-card>
+        </div>
+    </div>
+</ion-content>

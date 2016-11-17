@@ -1,0 +1,23 @@
+.vertical-margin {
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+#timestamp {
+    color: #afb8bc
+}
+
+#description-label {
+    color: #afb8bc;
+    font-size: small;
+}
+
+#description {
+    border: 1px solid #afb8bc;
+    width: 100%;
+    box-shadow: 5px 3px 3px #888888;
+}
+
+.card {
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+}

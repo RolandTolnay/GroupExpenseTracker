@@ -1,0 +1,19 @@
+<div class="card vertical-margin">
+    <div class="item item-text-wrap">
+        <div class="col">
+            <div id="timestamp" class="row">
+                {{ expenseCard.timeSinceCreation() }}
+            </div>
+            <div class="row">
+                {{ expenseCard.creditorUser | displayNameFilter }} has made a purchase of&nbsp;
+                <span id="cost"><b>{{ expenseCard.expense.cost }} RON</b></span>.
+            </div>
+            <div class="row" style="margin-top: 5px;">
+                <span id="description-label">Description</span>
+            </div>
+            <div id="description" class="row item-text-wrap">
+                {{ expenseCard.expense.description }}
+            </div>
+        </div>
+    </div>
+</div>

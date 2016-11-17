@@ -1,0 +1,19 @@
+<ion-modal-view>
+    <ion-header-bar>
+        <div class="buttons">
+            <button class="button button-clear" style="color: black"
+                    ng-click="settleDebts.closeModal()">
+                Close
+            </button>
+        </div>
+        <h1 class="title">Unsettled Debts</h1>
+    </ion-header-bar>
+    <ion-content class="background-color">
+        <div class="col">
+            <div class="row" ng-repeat="(key,value) in settleDebts.creditors">
+                <debt-detail-card creditor='key'
+                                  style="width: 100%"></debt-detail-card>
+            </div>
+        </div>
+    </ion-content>
+</ion-modal-view>

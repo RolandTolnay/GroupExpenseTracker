@@ -1,0 +1,48 @@
+<ion-modal-view>
+    <ion-header-bar>
+        <div class="buttons">
+            <button class="button button-clear" style="color: black"
+                    ng-click="expenseAdd.closeModal()">
+                Cancel
+            </button>
+        </div>
+        <h1 class="title">Add new expense</h1>
+    </ion-header-bar>
+    <ion-content class="background-color">
+        <div class="list">
+            <div class="padding">
+                <label id="expenseAdd-cost-label"
+                        class="item item-input item-floating-label no-border">
+                    <span class="input-label">Cost</span>
+                    <div class="row"
+                         style="width: 50%;
+                         padding-left: 0px;">
+                        <input type="text" placeholder="Cost"
+                               style="border: 1px solid #afb8bc;
+                                      border-radius: 5px;
+                                      padding-left: 5px;
+                                      margin-right: 5px;"
+                               ng-model="expenseAdd.expense.cost">
+                        <span class="label center-line"><b>RON</b></span>
+                    </div>
+                </label>
+                <label id="expenseAdd-description-label"
+                       class="item item-input item-floating-label no-border">
+                    <span class="input-label">Description</span>
+                <textarea placeholder="Description"
+                          ng-model="expenseAdd.expense.description"
+                          class="background-color thin-border"
+                          rows="3" cols="1">
+                </textarea>
+                </label>
+                <expense-contributors contributors="expenseAdd.contributors"></expense-contributors>
+                <div class="padding">
+                    <button class="button button-block button-positive"
+                            ng-click="expenseAdd.addNewExpense()">
+                        Add expense
+                    </button>
+                </div>
+            </div>
+        </div>
+    </ion-content>
+</ion-modal-view>

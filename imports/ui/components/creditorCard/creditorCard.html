@@ -1,0 +1,19 @@
+<div class="card vertical-margin" ng-if="!creditorCard.hideCard()">
+    <div class="item item-text-wrap creditorCard-background">
+        <div class="col">
+            <div class="row" style="font-size: large; margin-bottom: 10px;
+                                    padding-top: 0px">
+                You are owed by:
+            </div>
+            <div class="row" ng-repeat="(key,value) in creditorCard.debtors"
+                 style="margin-left: 20px">
+                <div class="col">
+                    {{ creditorCard.userFromId(key) | displayNameFilter }}
+                </div>
+                <div class="col">
+                    <b>{{ value }} RON</b>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
