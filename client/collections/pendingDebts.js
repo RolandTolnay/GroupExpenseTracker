@@ -1,8 +1,8 @@
 import { Mongo } from 'meteor/mongo';
 
-export const Debts = new Mongo.Collection('debts');
+export const PendingDebts = new Mongo.Collection('pendingDebts');
 
-Debts.allow({
+PendingDebts.allow({
    insert(userId) {
       return userId;
    },

@@ -1,18 +1,21 @@
-<div class="card vertical-margin" ng-if="!creditorCard.hideCard()">
+<div class="card vertical-margin">
     <div class="item item-text-wrap"
          style="padding: 5px 5px 5px 10px">
         <div class="row">
             <div class="col-70" style="line-height: 44px">
-                Approve settlement of 500 RON from User
+                Approve settlement of <b>{{ approveSettleCard.amount }} RON</b> from
+                <b>{{ approveSettleCard.debtorUser | displayNameFilter }}</b>
             </div>
             <div class="col-20">
                 <button class="button button-balanced"
-                        style="width: 95%;">
-                    Accept
+                        style="width: 95%;"
+                        ng-click="approveSettleCard.approveSettlement()">
+                    Approve
                 </button>
             </div>
             <div class="col-10">
-                <button class="button icon ion-ios-close-outline"></button>
+                <button class="button icon ion-ios-close-outline"
+                        ng-click="approveSettleCard.rejectSettlement()"></button>
             </div>
         </div>
     </div>

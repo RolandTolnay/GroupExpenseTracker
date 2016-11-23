@@ -6,9 +6,12 @@
         <item url="file://$USER_HOME$/.meteor/packages/allow-deny/1.0.5/web.browser/allow-deny-tests.js" />
         <item url="file://$USER_HOME$/.meteor/packages/dab0mb_ionic-assets/1.3.5/web.browser/packages/dab0mb_ionic-assets/.npm/package/node_modules/ionic-sdk-unofficial/css/ionic.css" />
         <item url="file://$USER_HOME$/.meteor/packages/base64/1.0.10/web.browser/base64.js" />
+        <item url="file://$USER_HOME$/.meteor/packages/meteorhacks_collection-utils/1.2.0/web.browser/packages/meteorhacks:collection-utils.js" />
         <item url="file://$USER_HOME$/.meteor/packages/binary-heap/1.0.10/web.browser/min-max-heap.js" />
         <item url="file://$USER_HOME$/.meteor/packages/binary-heap/1.0.10/web.browser/min-heap.js" />
+        <item url="file://$USER_HOME$/.meteor/packages/meteorhacks_aggregate/1.3.0/web.browser/packages/meteorhacks_aggregate.js" />
         <item url="file://$USER_HOME$/.meteor/packages/binary-heap/1.0.10/web.browser/max-heap.js" />
+        <item url="file://$USER_HOME$/.meteor/packages/jcbernack_reactive-aggregate/0.7.0/web.browser/aggregate.js" />
         <item url="file://$USER_HOME$/.meteor/packages/babel-runtime/0.1.13/web.browser/babel-runtime.js" />
         <item url="file://$USER_HOME$/.meteor/packages/pbastowski_angular-babel/1.3.7/web.browser/lib/runtime.js" />
         <item url="file://$USER_HOME$/.meteor/packages/pbastowski_angular-babel/1.3.7/web.browser/lib/browser-polyfill.js" />
@@ -214,9 +217,12 @@
       <root url="file://$USER_HOME$/.meteor/packages/allow-deny/1.0.5/web.browser/allow-deny-tests.js" />
       <root url="file://$USER_HOME$/.meteor/packages/dab0mb_ionic-assets/1.3.5/web.browser/packages/dab0mb_ionic-assets/.npm/package/node_modules/ionic-sdk-unofficial/css/ionic.css" />
       <root url="file://$USER_HOME$/.meteor/packages/base64/1.0.10/web.browser/base64.js" />
+      <root url="file://$USER_HOME$/.meteor/packages/meteorhacks_collection-utils/1.2.0/web.browser/packages/meteorhacks:collection-utils.js" />
       <root url="file://$USER_HOME$/.meteor/packages/binary-heap/1.0.10/web.browser/min-max-heap.js" />
       <root url="file://$USER_HOME$/.meteor/packages/binary-heap/1.0.10/web.browser/min-heap.js" />
+      <root url="file://$USER_HOME$/.meteor/packages/meteorhacks_aggregate/1.3.0/web.browser/packages/meteorhacks_aggregate.js" />
       <root url="file://$USER_HOME$/.meteor/packages/binary-heap/1.0.10/web.browser/max-heap.js" />
+      <root url="file://$USER_HOME$/.meteor/packages/jcbernack_reactive-aggregate/0.7.0/web.browser/aggregate.js" />
       <root url="file://$USER_HOME$/.meteor/packages/babel-runtime/0.1.13/web.browser/babel-runtime.js" />
       <root url="file://$USER_HOME$/.meteor/packages/pbastowski_angular-babel/1.3.7/web.browser/lib/runtime.js" />
       <root url="file://$USER_HOME$/.meteor/packages/pbastowski_angular-babel/1.3.7/web.browser/lib/browser-polyfill.js" />

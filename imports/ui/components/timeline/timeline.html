@@ -12,8 +12,11 @@
         <div class="row">
             <creditor-card style="width: 100%"></creditor-card>
         </div>
-        <div class="row">
-            <approve-settle-card style="width: 100%;"></approve-settle-card>
+        <div class="row" ng-repeat="pendingDebt in timeline.pendingDebts">
+            <approve-settle-card
+                    debtor="pendingDebt._id"
+                    amount="pendingDebt.amount"
+                    style="width: 100%;"></approve-settle-card>
         </div>
         <div class="row" ng-repeat="expense in timeline.expenses">
             <expense-card expense="expense" style="width: 100%"></expense-card>

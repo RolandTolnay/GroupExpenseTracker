@@ -33,7 +33,8 @@
                  ng-repeat="debt in debtDetailCard.credits">
                 {{ debt.expense.description }} - {{ debt.amount }} RON
             </div>
-            <div class="row" style="line-height: 67px; padding-bottom: 0px;">
+            <div class="row" style="line-height: 67px; padding-bottom: 0px;"
+                    ng-if="debtDetailCard.totalDebtAmount() >= debtDetailCard.totalCreditAmount()">
                 <div class="col">
                     Remaining debt: <b>{{ debtDetailCard.remainingDebt() }} RON</b>
                 </div>
@@ -44,6 +45,10 @@
                         {{ debtDetailCard.settleButtonText() }}
                     </button>
                 </div>
+            </div>
+            <div class="row" ng-if="debtDetailCard.totalDebtAmount() < debtDetailCard.totalCreditAmount()"
+                 style="margin-top: 15px"   >
+                Your debt will be cleared once&nbsp;<b>{{ debtDetailCard.userFromId(debtDetailCard.creditor) | displayNameFilter }}</b>&nbsp;has made a settlement.
             </div>
         </div>
     </div>

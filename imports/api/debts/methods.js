@@ -11,7 +11,8 @@ export function debtFromPayment(expense, contributors) {
       throw new Meteor.Error(404, 'No expense found!');
    }
 
-   var amount = Math.ceil(expense.cost / (_.size(contributors) + 1));
+   var amount = expense.cost / (_.size(contributors) + 1);
+   amount = Math.ceil(amount * 10) / 10;
    for (var property in contributors) {
       if (contributors.hasOwnProperty(property)) {
          createDebt(property,amount,expense);
@@ -48,7 +49,57 @@ export function setDebtsStatus(debtsSelector, status) {
    });
 }
 
+export function approvePendingDebt(debtor) {
+   Debts.update({
+      $and: [{
+         creditor: this.userId
+      }, {
+         debtor: debtor
+      }, {
+         status: 'pending'
+      }]
+   }, {
+      $set: {
+         status: 'settled'
+      }
+   }, {
+      multi: true
+   }, (error) => {
+      if (error) {
+         console.log('Unable to update debts');
+      } else {
+         console.log('Debts update complete');
+      }
+   });
+}
+
+export function rejectPendingDebt(debtor) {
+   Debts.update({
+      $and: [{
+         creditor: this.userId
+      }, {
+         debtor: debtor
+      }, {
+         status: 'pending'
+      }]
+   }, {
+      $set: {
+         status: 'unsettled'
+      }
+   }, {
+      multi: true
+   }, (error) => {
+      if (error) {
+         console.log('Unable to update debts');
+      } else {
+         console.log('Debts update complete');
+      }
+   });
+}
+
 Meteor.methods({
    debtFromPayment,
-   setDebtsStatus
+   setDebtsStatus,
+   approvePendingDebt,
+   rejectPendingDebt
 });

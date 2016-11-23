@@ -31,7 +31,7 @@ class ExpenseAdd {
    }
 
    addNewExpense() {
-      if (this.expense.cost && this.expense.description) {
+      if (this.expense.cost && this.expense.description && this.isNumber(this.expense.cost)) {
          this.expense.creditor = Meteor.userId();
          this.expense.createdAt = new Date();
 
@@ -58,6 +58,10 @@ class ExpenseAdd {
 
    reset() {
       this.expense = {};
+   }
+
+   isNumber(n) {
+      return !isNaN(parseFloat(n)) && isFinite(n);
    }
 }
 

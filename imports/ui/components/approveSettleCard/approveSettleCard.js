@@ -1,7 +1,7 @@
 import angular from 'angular';
 import angularMeteor from 'angular-meteor';
 
-import { Debts } from '/imports/api/debts';
+import { name as DisplayNameFilter } from '../../filters/displayNameFilter';
 
 import template from './approveSettleCard.html';
 import './approveSettleCard.css';
@@ -12,33 +12,26 @@ class ApproveSettleCard {
 
       $reactive(this).attach($scope);
 
-      this.subscribe('debts',
+      this.subscribe('users',
          () => {
-            console.log('Debts subscription ready!');
-            this.processDebts();
+            this.debtorUser = this.userFromId(this.getReactively('debtor'));
          });
    }
 
-   processDebts() {
-      console.log('processDebts called');
-      var debts = Debts.find({
-         $and: [{
-            creditor: Meteor.userId()
-         }, {
-            debtor: this.debtor
-         }, {
-            status: 'pending'
-         }]
-      }).fetch();
-      if (debts && _.size(debts) != 0) {
-         this.hasToBeApproved = true;
-         this.total = 0;
-         _.each(debts, (debt) => {
-            this.total += debt.amount;
-         });
+   userFromId(id) {
+      if (id) {
+         return Meteor.users.findOne(id);
       } else {
-         this.hasToBeApproved = false;
+         return '';
       }
+   }
+
+   approveSettlement() {
+      Meteor.call('approvePendingDebt',this.debtor);
+   }
+
+   rejectSettlement() {
+      Meteor.call('rejectPendingDebt',this.debtor);
    }
 }
 
@@ -49,7 +42,8 @@ export default angular.module(name, [
 ]).component(name, {
    template,
    bindings: {
-     debtor: '<'
+      debtor: '<',
+      amount: '<'
    },
    controllerAs: name,
    controller: ApproveSettleCard

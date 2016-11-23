@@ -14,7 +14,6 @@ class CreditorCard {
 
       this.subscribe('debts',
          () => {
-            console.log('Debts subscription ready!');
             this.processDebts();
          });
 
@@ -37,9 +36,9 @@ class CreditorCard {
                this.debtors[debt.debtor] = 0;
             }
             this.debtors[debt.debtor] += debt.amount;
+            this.debtors[debt.debtor] = Math.ceil(this.debtors[debt.debtor] * 10) / 10;
          });
       } else {
-         console.log('hasCredit is false');
          this.hasCredit = false;
       }
    }

@@ -17,3 +17,4 @@ if (Meteor.isCordova) {
 } else {
    angular.element(document).ready(onReady);
 }
+

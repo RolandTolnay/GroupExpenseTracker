@@ -30,19 +30,16 @@ class SettleDebts {
          }]
       }).fetch();
       if (debtsFromDB && _.size(debtsFromDB) != 0) {
-         this.hasDebt = true;
          var debts = {};
          this.creditorDebts = {};
          _.each(debtsFromDB, (debt) => {
-            if (!debts[debt._id]) {
-               debts[debt._id] = debt;
+            if (!this.creditorDebts[debt.creditor]) {
+               this.creditorDebts[debt.creditor] = {};
             }
-            debts[debt._id].expense = this.expenseFromId(debt.expenseId);
-            this.creditorDebts[debt.creditor] = debts;
+            this.creditorDebts[debt.creditor][debt._id] = debt;
+            this.creditorDebts[debt.creditor][debt._id].expense = this.expenseFromId(debt.expenseId);
          });
          console.log('this.debts is ', debts);
-      } else {
-         this.hasDebt = false;
       }
    }
 
@@ -56,7 +53,6 @@ class SettleDebts {
             }]
       }).fetch();
       if (creditsFromDB && _.size(creditsFromDB) != 0) {
-         this.hasCredit = true;
          var credits = {};
          this.creditorCredits = {};
          _.each(creditsFromDB, (debt) => {
@@ -67,8 +63,6 @@ class SettleDebts {
             this.creditorCredits[debt.debtor][debt._id].expense = this.expenseFromId(debt.expenseId);
          });
          console.log('this.credits is ', credits);
-      } else {
-         this.hasDebt = false;
       }
    }
 
