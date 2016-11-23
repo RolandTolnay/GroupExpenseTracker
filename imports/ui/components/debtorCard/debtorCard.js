@@ -39,7 +39,6 @@ class DebtorCard {
             }
             this.creditors[debt.creditor] += debt.amount;
          });
-         console.log(this.creditors);
       } else {
          this.hasDebt = false;
       }

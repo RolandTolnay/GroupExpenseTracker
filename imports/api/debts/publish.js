@@ -12,7 +12,13 @@ if (Meteor.isServer) {
                creditor: this.userId
             }]
          }, {
-           status: 'unsettled'
+            $or: [
+               {
+                  status: 'unsettled'
+               },
+               {
+                  status: 'pending'
+               }]
          }]
       };
 

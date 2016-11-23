@@ -31,6 +31,24 @@ function createDebt(debtorId, amount, expense) {
    Debts.insert(debt);
 }
 
+export function setDebtsStatus(debtsSelector, status) {
+   console.log('Setting debt status for selector',debtsSelector,' to status',status);
+   Debts.update({ $or: debtsSelector }, {
+      $set: {
+         status: status
+      }
+   }, {
+      multi: true
+   }, (error) => {
+      if (error) {
+         console.log('Unable to update debts');
+      } else {
+         console.log('Debts update complete');
+      }
+   });
+}
+
 Meteor.methods({
-   debtFromPayment
+   debtFromPayment,
+   setDebtsStatus
 });

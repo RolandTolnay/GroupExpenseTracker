@@ -3,12 +3,14 @@ import angularMeteor from 'angular-meteor';
 import uiRouter from 'angular-ui-router';
 
 import { Expenses } from '/imports/api/expenses';
+import { Debts } from '/imports/api/debts';
 
 import template from './timeline.html';
 import { name as ExpenseAdd } from '../expenseAdd/expenseAdd';
 import { name as ExpenseCard } from '../expenseCard/expenseCard';
 import { name as DebtorCard } from '../debtorCard/debtorCard';
 import { name as CreditorCard } from '../creditorCard/creditorCard';
+import { name as ApproveSettleCard } from '../approveSettleCard/approveSettleCard';
 
 import './timeline.css';
 
@@ -19,6 +21,7 @@ class Timeline {
       $reactive(this).attach($scope);
 
       this.subscribe('expenses');
+      this.subscribe('debts');
 
       this.helpers({
          expenses() {
@@ -40,7 +43,8 @@ export default angular.module(name, [
    ExpenseAdd,
    ExpenseCard,
    DebtorCard,
-   CreditorCard
+   CreditorCard,
+   ApproveSettleCard
 ]).component(name, {
       template,
       controllerAs: name,

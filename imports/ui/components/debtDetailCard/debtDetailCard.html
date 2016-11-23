@@ -38,8 +38,10 @@
                     Remaining debt: <b>{{ debtDetailCard.remainingDebt() }} RON</b>
                 </div>
                 <div class="col">
-                    <button class="button button-block button-assertive">
-                        Settle
+                    <button class="button button-block button-assertive"
+                            ng-click="debtDetailCard.settleDebts()"
+                            ng-disabled="debtDetailCard.settleButtonDisabled">
+                        {{ debtDetailCard.settleButtonText() }}
                     </button>
                 </div>
             </div>

@@ -3,10 +3,9 @@ import angularMeteor from 'angular-meteor';
 import _ from 'underscore';
 
 import { Meteor } from 'meteor/meteor';
+import { Tracker } from 'meteor/tracker';
 
 import template from './debtDetailCard.html';
-import { Debts } from '/imports/api/debts';
-import { Expenses } from '/imports/api/expenses';
 import { name as DisplayNameFilter } from '../../filters/displayNameFilter';
 
 import './debtDetailCard.css';
@@ -18,69 +17,11 @@ class DebtDetailCard {
       $scope.viewModel(this);
 
       this.subscribe('users');
-      this.subscribe('debts',
-         () => {
-            console.log('Debts subscription ready!');
-            this.processDebts();
-            this.processCredits();
-         });
-   }
 
-   expenseFromId(expenseId) {
-      return Expenses.findOne(expenseId);
-   }
-
-   processDebts() {
-      console.log('creditorId is ', this.creditor);
-      var debts = Debts.find({
-         $and: [{
-            debtor: Meteor.userId()
-         }, {
-            creditor: this.creditor
-         }, {
-            status: 'unsettled'
-         }]
-      }).fetch();
-      if (debts && _.size(debts) != 0) {
-         this.hasDebt = true;
-         this.debts = {};
-         _.each(debts, (debt) => {
-            if (!this.debts[debt._id]) {
-               this.debts[debt._id] = debt;
-            }
-            this.debts[debt._id].expense = this.expenseFromId(debt.expenseId);
-         });
-      } else {
-         this.hasDebt = false;
-      }
-   }
-
-   processCredits() {
-      var credits = Debts.find({
-         $and: [{
-            debtor: this.creditor
-         }, {
-            creditor: Meteor.userId()
-         }, {
-            status: 'unsettled'
-         }]
-      }).fetch();
-      if (credits && _.size(credits) != 0) {
-         this.hasCredit = true;
-         this.credits = {};
-         _.each(credits, (debt) => {
-            if (!this.credits[debt._id]) {
-               this.credits[debt._id] = debt;
-            }
-            this.credits[debt._id].expense = this.expenseFromId(debt.expenseId);
-         });
-      } else {
-         this.hasDebt = false;
-      }
+      this.settleButtonDisabled = false;
    }
 
    userFromId(id) {
-      console.log('userFromId called with id ', id);
       if (id) {
          return Meteor.users.findOne(id);
       } else {
@@ -109,6 +50,54 @@ class DebtDetailCard {
       amount = this.totalDebtAmount() - this.totalCreditAmount();
       return amount;
    }
+
+   settleDebts() {
+      if (this.totalDebtAmount() > this.totalCreditAmount()) {
+         console.log('Debt higher than credit');
+         //Marking all debts as pending, and all credits as settled.
+
+         var debtsSelector = [];
+
+         _.each(this.debts, (debt) => {
+            debtsSelector.push({ _id: debt._id });
+            debt.status = 'pending';
+         });
+         Meteor.call('setDebtsStatus', debtsSelector, 'pending');
+
+         if (this.hasCredit) {
+            var creditSelector = [];
+
+            _.each(this.credits, (credit) => {
+               creditSelector.push({ _id: credit._id });
+               credit.status = 'settled';
+            });
+            Meteor.call('setDebtsStatus', creditSelector, 'settled');
+         }
+      }
+   }
+
+   settleButtonText() {
+      if (this.debts) {
+         var debts = _.values(this.debts);
+         if (_.size(debts) != 0) {
+            var status = debts[0].status;
+            if (status === 'unsettled') {
+               this.settleButtonDisabled = false;
+               return 'Settle';
+            } else if (status === 'pending') {
+               this.settleButtonDisabled = true;
+               return 'Pending Approval';
+            } else {
+               this.settleButtonDisabled = true;
+               return status;
+            }
+         } else {
+            this.settleButtonDisabled = true;
+         }
+      } else {
+         this.settleButtonDisabled = true;
+      }
+   }
 }
 
 const name = 'debtDetailCard';
@@ -119,7 +108,9 @@ export default angular.module(name, [
 ]).component(name, {
    template: template,
    bindings: {
-      creditor: '<'
+      creditor: '<',
+      debts: '<',
+      credits: '<'
    },
    controllerAs: name,
    controller: DebtDetailCard

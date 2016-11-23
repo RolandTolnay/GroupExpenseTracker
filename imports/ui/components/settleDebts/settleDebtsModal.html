@@ -11,7 +11,9 @@
     <ion-content class="background-color">
         <div class="col">
             <div class="row" ng-repeat="(key,value) in settleDebts.creditors">
-                <debt-detail-card creditor='key'
+                <debt-detail-card creditor="key"
+                                  debts="settleDebts.creditorDebts[key]"
+                                  credits="settleDebts.creditorCredits[key]"
                                   style="width: 100%"></debt-detail-card>
             </div>
         </div>

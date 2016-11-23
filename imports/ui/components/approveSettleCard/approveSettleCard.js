@@ -1,12 +1,12 @@
 import angular from 'angular';
 import angularMeteor from 'angular-meteor';
 
-import template from './creditorCard.html';
 import { Debts } from '/imports/api/debts';
 
-import './creditorCard.css';
+import template from './approveSettleCard.html';
+import './approveSettleCard.css';
 
-class CreditorCard {
+class ApproveSettleCard {
    constructor($scope, $reactive) {
       'ngInject';
 
@@ -17,50 +17,40 @@ class CreditorCard {
             console.log('Debts subscription ready!');
             this.processDebts();
          });
-
-      //this.hasCredit = true;
    }
 
    processDebts() {
+      console.log('processDebts called');
       var debts = Debts.find({
          $and: [{
             creditor: Meteor.userId()
          }, {
-            status: 'unsettled'
+            debtor: this.debtor
+         }, {
+            status: 'pending'
          }]
       }).fetch();
       if (debts && _.size(debts) != 0) {
-         this.hasCredit = true;
-         this.debtors = {};
+         this.hasToBeApproved = true;
+         this.total = 0;
          _.each(debts, (debt) => {
-            if (!this.debtors[debt.debtor]) {
-               this.debtors[debt.debtor] = 0;
-            }
-            this.debtors[debt.debtor] += debt.amount;
+            this.total += debt.amount;
          });
       } else {
-         console.log('hasCredit is false');
-         this.hasCredit = false;
-      }
-   }
-
-   userFromId(id) {
-      return Meteor.users.findOne(id);
-   }
-
-   hideCard() {
-      if (!Meteor.userId() || !this.hasCredit) {
-         return true;
+         this.hasToBeApproved = false;
       }
    }
 }
 
-const name = 'creditorCard';
+const name = 'approveSettleCard';
 
 export default angular.module(name, [
    angularMeteor
 ]).component(name, {
    template,
+   bindings: {
+     debtor: '<'
+   },
    controllerAs: name,
-   controller: CreditorCard
+   controller: ApproveSettleCard
 })
