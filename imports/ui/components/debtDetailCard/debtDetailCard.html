@@ -1,5 +1,5 @@
 <div class="card vertical-margin">
-    <div class="item item-text-wrap">
+    <div class="item item-text-wrap card-padding-smallScrn">
         <div class="col" style="padding-bottom: 0px;">
             <div class="row" style="margin-bottom: 10px">
                 with&nbsp;
@@ -11,9 +11,7 @@
                  style="margin-bottom: 5px;
                  border-top: 1px solid #afb8bc;
                  background-color: #ffd6cc">
-                You owe&nbsp;
-                <b>{{ debtDetailCard.totalDebtAmount() }} RON</b>
-                &nbsp;for his expenses of
+                <span>You pay&nbsp;<b>{{ debtDetailCard.totalDebtAmount() }} RON</b>&nbsp;for expenses:</span>
             </div>
             <div class="row debtDetailCard-expense-row"
                  ng-repeat="debt in debtDetailCard.debts">
@@ -25,18 +23,16 @@
                  margin-bottom: 5px;
                  border-top: 1px solid #afb8bc;
                  background-color: #b3ffb3">
-                You are owed&nbsp;
-                <b>{{ debtDetailCard.totalCreditAmount() }} RON</b>
-                &nbsp;for your expenses of
+                <span>You receive&nbsp;<b>{{ debtDetailCard.totalCreditAmount() }} RON</b>&nbsp;for expenses:</span>
             </div>
             <div class="row debtDetailCard-expense-row"
                  ng-repeat="debt in debtDetailCard.credits">
                 {{ debt.expense.description }} - {{ debt.amount }} RON
             </div>
-            <div class="row" style="line-height: 67px; padding-bottom: 0px;"
+            <div class="row" style="padding-bottom: 0px;"
                     ng-if="debtDetailCard.totalDebtAmount() >= debtDetailCard.totalCreditAmount()">
-                <div class="col">
-                    Remaining debt: <b>{{ debtDetailCard.remainingDebt() }} RON</b>
+                <div class="col" style="margin-top: 13px;">
+                    <span>Remaining debt: <b>{{ debtDetailCard.remainingDebt() }} RON</b></span>
                 </div>
                 <div class="col">
                     <button class="button button-block button-assertive"

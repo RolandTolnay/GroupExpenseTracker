@@ -1,9 +1,11 @@
 <div class="card vertical-margin" ng-if="!debtorCard.hideCard()">
-    <div class="item item-text-wrap debtorCard-background"
+    <div class="item item-text-wrap debtorCard-background card-padding-smallScrn"
          style="padding-bottom: 0px"   >
         <div class="col">
-            <div class="row" style="font-size: large; margin-bottom: 10px;
-                                    padding-top: 0px">
+            <div class="row" style="font-size: large;
+                                    margin-bottom: 15px;
+                                    padding-top: 0px;
+                                    border-bottom: 1px solid #660000;">
                 You owe:
             </div>
             <div class="row" ng-repeat="(key,value) in debtorCard.creditors"
@@ -15,7 +17,7 @@
                     <b>{{ value }} RON</b>
                 </div>
             </div>
-            <div class="row" style="margin-top: 5px;">
+            <div id="settleDebtsBtn-row" class="row" style="margin-top: 5px;">
                 <settle-debts creditors="debtorCard.creditors"
                               style="width: 100%">
                 </settle-debts>

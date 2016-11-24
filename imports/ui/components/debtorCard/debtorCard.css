@@ -1,3 +1,9 @@
 .debtorCard-background {
     background-color: #ffd6cc;
 }
+
+@media (max-width: 414px) {
+    #settleDebtsBtn-row {
+        padding-bottom: 0;
+    }
+}

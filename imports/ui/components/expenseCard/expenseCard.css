@@ -22,3 +22,13 @@
 .card {
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
 }
+
+@media (max-width: 414px) {
+    .card-padding-smallScrn {
+        padding: 3px;
+    }
+
+    #expenseCard-col {
+        padding-top: 0px;
+    }
+}

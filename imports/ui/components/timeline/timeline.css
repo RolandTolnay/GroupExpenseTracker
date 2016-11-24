@@ -1,3 +1,14 @@
 .background-color {
     background-color: #ecf5f9;
 }
+
+@media (max-width: 414px) {
+    .smallScrn-no-padding {
+        padding: 0px;
+    }
+
+    .smallScrn-noVertical-padding {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+}

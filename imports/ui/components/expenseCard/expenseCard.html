@@ -1,12 +1,13 @@
 <div class="card vertical-margin">
-    <div class="item item-text-wrap">
-        <div class="col">
+    <div class="item item-text-wrap card-padding-smallScrn"
+    style="padding-bottom: 5px;">
+        <div id="expenseCard-col" class="col">
             <div id="timestamp" class="row">
                 {{ expenseCard.timeSinceCreation() }}
             </div>
             <div class="row">
-                {{ expenseCard.creditorUser | displayNameFilter }} has made a purchase of&nbsp;
-                <span id="cost"><b>{{ expenseCard.expense.cost }} RON</b></span>.
+                <span>{{ expenseCard.creditorUser | displayNameFilter }} has made a purchase of
+                <b>{{ expenseCard.expense.cost }} RON</b>.</span>
             </div>
             <div class="row" style="margin-top: 5px;">
                 <span id="description-label">Description</span>
