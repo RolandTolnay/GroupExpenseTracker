@@ -44,7 +44,7 @@
             </div>
             <div class="row" ng-if="debtDetailCard.totalDebtAmount() < debtDetailCard.totalCreditAmount()"
                  style="margin-top: 15px"   >
-                Your debt will be cleared once&nbsp;<b>{{ debtDetailCard.userFromId(debtDetailCard.creditor) | displayNameFilter }}</b>&nbsp;has made a settlement.
+                <span>Your debt will be cleared once&nbsp;<b>{{ debtDetailCard.userFromId(debtDetailCard.creditor) | displayNameFilter }}</b>&nbsp;has made a settlement.</span>
             </div>
         </div>
     </div>
