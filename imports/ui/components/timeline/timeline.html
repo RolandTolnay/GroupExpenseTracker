@@ -5,7 +5,7 @@
     </div>
 </div>
 <ion-content class="has-header has-subheader background-color">
-    <div class="col smallScrn-no-padding">
+    <div class="col smallScrn-no-padding" style="padding-top: 10px">
         <div class="row smallScrn-no-padding">
             <debtor-card style="width: 100%"></debtor-card>
         </div>
@@ -13,7 +13,7 @@
             <creditor-card style="width: 100%"></creditor-card>
         </div>
         <div class="row smallScrn-no-padding"
-             ng-repeat="pendingDebt in timeline.pendingDebts">
+             ng-repeat="pendingDebt in timeline.pendingCredits">
             <approve-settle-card
                     debtor="pendingDebt._id"
                     amount="pendingDebt.amount"

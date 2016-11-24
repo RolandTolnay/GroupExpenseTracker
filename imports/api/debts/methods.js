@@ -51,12 +51,22 @@ export function setDebtsStatus(debtsSelector, status) {
 
 export function approvePendingDebt(debtor) {
    Debts.update({
-      $and: [{
-         creditor: this.userId
-      }, {
-         debtor: debtor
-      }, {
-         status: 'pending'
+      $or: [{
+         $and: [{
+            creditor: this.userId
+         }, {
+            debtor: debtor
+         }, {
+            status: 'pending'
+         }]
+      },{
+         $and: [{
+            creditor: debtor
+         }, {
+            debtor: this.userId
+         }, {
+            status: 'pending'
+         }]
       }]
    }, {
       $set: {
@@ -75,12 +85,22 @@ export function approvePendingDebt(debtor) {
 
 export function rejectPendingDebt(debtor) {
    Debts.update({
-      $and: [{
-         creditor: this.userId
-      }, {
-         debtor: debtor
-      }, {
-         status: 'pending'
+      $or: [{
+         $and: [{
+            creditor: this.userId
+         }, {
+            debtor: debtor
+         }, {
+            status: 'pending'
+         }]
+      },{
+         $and: [{
+            creditor: debtor
+         }, {
+            debtor: this.userId
+         }, {
+            status: 'pending'
+         }]
       }]
    }, {
       $set: {

@@ -57,7 +57,7 @@ class DebtDetailCard {
    settleDebts() {
       if (this.totalDebtAmount() >= this.totalCreditAmount()) {
          console.log('Debt higher than credit');
-         //Marking all debts as pending, and all credits as settled.
+         //Marking all debts as pending.
          var debtsSelector = [];
 
          _.each(this.debts, (debt) => {
@@ -71,9 +71,9 @@ class DebtDetailCard {
 
             _.each(this.credits, (credit) => {
                creditSelector.push({ _id: credit._id });
-               credit.status = 'settled';
+               credit.status = 'pending';
             });
-            Meteor.call('setDebtsStatus', creditSelector, 'settled');
+            Meteor.call('setDebtsStatus', creditSelector, 'pending');
          }
       }
    }

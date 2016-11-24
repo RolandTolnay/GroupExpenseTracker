@@ -2,7 +2,6 @@ import { Meteor } from 'meteor/meteor';
 import { ReactiveAggregate } from 'meteor/jcbernack:reactive-aggregate';
 
 import { Debts } from './collection';
-import { PendingDebts } from './collection';
 
 if (Meteor.isServer) {
    Meteor.publish('debts', function () {
@@ -28,7 +27,7 @@ if (Meteor.isServer) {
          return Debts.find(selector);
       }
    });
-   Meteor.publish('pendingDebts', function () {
+   Meteor.publish('pendingCredits', function () {
       ReactiveAggregate(this, Debts, [{
          $match: {
             $and: [{
@@ -40,6 +39,28 @@ if (Meteor.isServer) {
       }, {
          $group: {
             _id: '$debtor',
+            amount: {
+               $sum: '$amount'
+            }
+         }
+      }], {
+         clientCollection: "pendingCredits"
+      });
+   });
+   Meteor.publish('pendingDebts', function (creditor) {
+      ReactiveAggregate(this, Debts, [{
+         $match: {
+            $and: [{
+               debtor: this.userId
+            },{
+               creditor: creditor
+            }, {
+               status: 'pending'
+            }]
+         }
+      }, {
+         $group: {
+            _id: '$creditor',
             amount: {
                $sum: '$amount'
             }

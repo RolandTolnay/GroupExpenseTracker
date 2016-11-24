@@ -4,7 +4,7 @@ import uiRouter from 'angular-ui-router';
 
 import { Expenses } from '/imports/api/expenses';
 import { Debts } from '/imports/api/debts';
-import { PendingDebts } from '/client/collections/pendingDebts';
+import { PendingCredits } from '/client/collections/pendingCredits';
 
 import template from './timeline.html';
 import { name as ExpenseAdd } from '../expenseAdd/expenseAdd';
@@ -22,7 +22,7 @@ class Timeline {
       $reactive(this).attach($scope);
 
       this.subscribe('expenses');
-      this.subscribe('pendingDebts');
+      this.subscribe('pendingCredits');
 
       this.helpers({
          expenses() {
@@ -32,8 +32,8 @@ class Timeline {
                }
             });
          },
-         pendingDebts() {
-            return PendingDebts.find({});
+         pendingCredits() {
+            return PendingCredits.find({});
          }
       });
    }

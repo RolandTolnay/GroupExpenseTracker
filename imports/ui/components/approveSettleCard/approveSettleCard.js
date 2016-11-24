@@ -2,6 +2,7 @@ import angular from 'angular';
 import angularMeteor from 'angular-meteor';
 
 import { name as DisplayNameFilter } from '../../filters/displayNameFilter';
+import { PendingDebts } from '/client/collections/pendingDebts';
 
 import template from './approveSettleCard.html';
 import './approveSettleCard.css';
@@ -17,6 +18,17 @@ class ApproveSettleCard {
             this.debtorUser = this.userFromId(this.getReactively('debtor'));
             this.amount = Math.ceil(this.amount * 10) / 10;
          });
+      this.subscribe('pendingDebts',() => [
+         this.getReactively('debtor')
+      ]);
+
+      this.helpers({
+         pendingDebts() {
+            return PendingDebts.find({
+               _id: this.getReactively('debtor')
+            });
+         }
+      })
    }
 
    userFromId(id) {
@@ -33,6 +45,27 @@ class ApproveSettleCard {
 
    rejectSettlement() {
       Meteor.call('rejectPendingDebt',this.debtor);
+   }
+
+   approvableAmount() {
+      var amount = 0;
+      if (this.pendingDebts && _.size(this.pendingDebts) != 0) {
+         amount = this.amount - this.pendingDebts[0].amount;
+      } else {
+         amount = this.amount;
+      }
+      return Math.ceil(amount * 10) / 10;
+   }
+
+   showCard() {
+      var isShown;
+      console.log('this.pendingDebts',this.pendingDebts);
+      if (this.pendingDebts && _.size(this.pendingDebts) != 0) {
+         isShown = this.amount > this.pendingDebts[0].amount;
+      } else {
+         isShown = true;
+      }
+      return isShown;
    }
 }
 
