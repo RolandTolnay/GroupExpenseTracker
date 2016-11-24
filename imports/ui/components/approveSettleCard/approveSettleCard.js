@@ -15,6 +15,7 @@ class ApproveSettleCard {
       this.subscribe('users',
          () => {
             this.debtorUser = this.userFromId(this.getReactively('debtor'));
+            this.amount = Math.ceil(this.amount * 10) / 10;
          });
    }
 

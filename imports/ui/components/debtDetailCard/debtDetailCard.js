@@ -34,6 +34,7 @@ class DebtDetailCard {
       _.each(this.debts, (debt) => {
          amount += debt.amount;
       });
+      amount = Math.ceil(amount * 10) / 10;
       return amount;
    }
 
@@ -42,6 +43,7 @@ class DebtDetailCard {
       _.each(this.credits, (debt) => {
          amount += debt.amount;
       });
+      amount = Math.ceil(amount * 10) / 10;
       return amount;
    }
 
