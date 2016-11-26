@@ -17,6 +17,8 @@ class DebtorCard {
          () => {
             this.processDebts();
          });
+
+      this.totalDebts = 0;
    }
 
    processDebts() {
@@ -36,7 +38,9 @@ class DebtorCard {
             }
             this.creditors[debt.creditor] += debt.amount;
             this.creditors[debt.creditor] = Math.ceil(this.creditors[debt.creditor] * 10) / 10;
+            this.totalDebts += debt.amount;
          });
+         this.totalDebts = Math.ceil(this.totalDebts * 10) / 10;
       } else {
          this.hasDebt = false;
       }

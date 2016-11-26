@@ -17,7 +17,7 @@ class CreditorCard {
             this.processDebts();
          });
 
-      //this.hasCredit = true;
+      this.totalCredits = 0;
    }
 
    processDebts() {
@@ -37,7 +37,9 @@ class CreditorCard {
             }
             this.debtors[debt.debtor] += debt.amount;
             this.debtors[debt.debtor] = Math.ceil(this.debtors[debt.debtor] * 10) / 10;
+            this.totalCredits += debt.amount;
          });
+         this.totalCredits = Math.ceil(this.totalCredits * 10) / 10;
       } else {
          this.hasCredit = false;
       }
