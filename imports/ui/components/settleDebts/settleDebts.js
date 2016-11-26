@@ -7,6 +7,7 @@ import { Expenses } from '/imports/api/expenses';
 
 import template from './settleDebtsButton.html';
 import modalTemplate from './settleDebtsModal.html';
+import './settleDebts.css';
 
 class SettleDebts {
    constructor($scope, $ionicModal, $reactive) {

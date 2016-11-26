@@ -2,3 +2,18 @@
     margin-left: 15px;
     font-style: italic;
 }
+
+#debtDetailCard-settleDebtsBtn {
+    font-size: 1.1em;
+    min-height: 44px;
+    line-height: 39px;
+}
+
+#remainingDebtRow {
+    margin-top: 13px;
+    margin-bottom: 10px;
+    border-top: 1px solid #afb8bc;
+    text-align: center;
+    width: 100%;
+    font-size: 1.1em;
+}

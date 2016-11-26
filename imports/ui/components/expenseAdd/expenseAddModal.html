@@ -10,9 +10,9 @@
     </ion-header-bar>
     <ion-content class="background-color">
         <div class="list">
-            <div class="padding">
+            <div class="padding" style="padding-top: 0; padding-bottom: 0;">
                 <label id="expenseAdd-cost-label"
-                        class="item item-input item-floating-label no-border">
+                       class="item item-input item-floating-label no-border">
                     <span class="input-label">Cost</span>
                     <div class="row"
                          style="width: 50%;
@@ -32,11 +32,17 @@
                 <textarea placeholder="Description"
                           ng-model="expenseAdd.expense.description"
                           class="background-color thin-border"
+                          style="margin-top: 5px;"
                           rows="3" cols="1">
                 </textarea>
                 </label>
                 <expense-contributors contributors="expenseAdd.contributors"></expense-contributors>
-                <div class="padding">
+                <ion-checkbox id="excludeSelfCbx"
+                              ng-model="expenseAdd.excludeSelf"
+                                style="padding-top: 10px;">
+                    Exclude myself from this expense
+                </ion-checkbox>
+                <div class="padding" style="margin-top: 10px;">
                     <button class="button button-block button-positive"
                             ng-click="expenseAdd.addNewExpense()">
                         Add expense

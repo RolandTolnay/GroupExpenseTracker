@@ -29,21 +29,25 @@
                  ng-repeat="debt in debtDetailCard.credits">
                 {{ debt.expense.description }} - {{ debt.amount }} RON
             </div>
-            <div class="row" style="padding-bottom: 0px;"
-                    ng-if="debtDetailCard.totalDebtAmount() >= debtDetailCard.totalCreditAmount()">
-                <div class="col" style="margin-top: 13px;">
+            <div class="row"
+                 style="padding-bottom: 0px;                 "
+                 ng-if="debtDetailCard.totalDebtAmount() >= debtDetailCard.totalCreditAmount()">
+                <div id="remainingDebtRow">
                     <span>Remaining debt: <b>{{ debtDetailCard.remainingDebt() }} RON</b></span>
                 </div>
-                <div class="col">
-                    <button class="button button-block button-assertive"
-                            ng-click="debtDetailCard.settleDebts()"
-                            ng-disabled="debtDetailCard.settleButtonDisabled">
-                        {{ debtDetailCard.settleButtonText() }}
-                    </button>
-                </div>
+            </div>
+            <div class="row"
+                 ng-if="debtDetailCard.totalDebtAmount() >= debtDetailCard.totalCreditAmount()"
+            style="padding-bottom: 0px">
+                <button id="debtDetailCard-settleDebtsBtn"
+                        class="button button-block button-assertive"
+                        ng-click="debtDetailCard.settleDebts()"
+                        ng-disabled="debtDetailCard.settleButtonDisabled">
+                    {{ debtDetailCard.settleButtonText() }}
+                </button>
             </div>
             <div class="row" ng-if="debtDetailCard.totalDebtAmount() < debtDetailCard.totalCreditAmount()"
-                 style="margin-top: 15px"   >
+                 style="margin-top: 15px">
                 <span>Your debt will be cleared once&nbsp;<b>{{ debtDetailCard.userFromId(debtDetailCard.creditor) | displayNameFilter }}</b>&nbsp;has made a settlement.</span>
             </div>
         </div>

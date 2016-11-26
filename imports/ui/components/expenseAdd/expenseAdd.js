@@ -23,6 +23,7 @@ class ExpenseAdd {
 
    openModal() {
       this.reset();
+      this.excludeSelf = false;
       this.modal.show();
    }
 
@@ -39,7 +40,7 @@ class ExpenseAdd {
 
          Expenses.insert(this.expense, (error, id) => {
             this.expense._id = id;
-            Meteor.call('debtFromPayment', this.expense, this.contributors);
+            Meteor.call('debtFromPayment', this.expense, this.contributors, this.excludeSelf);
             this.reset();
          });
          this.closeModal();

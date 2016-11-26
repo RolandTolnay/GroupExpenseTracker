@@ -7,6 +7,9 @@
         -ms-flex: 0 0 50%;
         flex: 0 0 50%;
         max-width: 50%;
+        text-align: center;
+        padding-right: 3px;
+        padding-left: 3px;
     }
 
     .approveSettleCard-approve-col {
@@ -39,7 +42,8 @@
         -ms-flex: 0 0 70%;
         flex: 0 0 70%;
         max-width: 70%;
-        margin-top: 10px;
+        margin-top: 12px;
+        text-align: center;
     }
 
     .approveSettleCard-approve-col {
@@ -61,4 +65,16 @@
         flex: 0 0 10%;
         max-width: 10%;
     }
+}
+
+#approveSettleBtn {
+    font-size: 1.1em;
+    min-height: 44px;
+    line-height: 39px;
+}
+
+#rejectSettleBtn {
+    font-size: 1.1em;
+    min-height: 44px;
+    line-height: 39px;
 }

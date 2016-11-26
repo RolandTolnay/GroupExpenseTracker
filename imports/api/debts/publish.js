@@ -6,20 +6,10 @@ import { Debts } from './collection';
 if (Meteor.isServer) {
    Meteor.publish('debts', function () {
       const selector = {
-         $and: [{
-            $or: [{
-               debtor: this.userId
-            }, {
-               creditor: this.userId
-            }]
+         $or: [{
+            debtor: this.userId
          }, {
-            $or: [
-               {
-                  status: 'unsettled'
-               },
-               {
-                  status: 'pending'
-               }]
+            creditor: this.userId
          }]
       };
 
@@ -52,7 +42,7 @@ if (Meteor.isServer) {
          $match: {
             $and: [{
                debtor: this.userId
-            },{
+            }, {
                creditor: creditor
             }, {
                status: 'pending'

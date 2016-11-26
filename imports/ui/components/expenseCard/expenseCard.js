@@ -6,6 +6,7 @@ import { Meteor } from 'meteor/meteor';
 
 import template from './expenseCard.html';
 import { name as DisplayNameFilter } from '../../filters/displayNameFilter';
+import { name as ExpenseCardContribution } from '../expenseCardContribution/expenseCardContribution';
 
 import './expenseCard.css';
 
@@ -34,13 +35,19 @@ class ExpenseCard {
       }
       return '';
    }
+
+   cardClicked() {
+      //TODO: CRUD
+      console.log("Card tapped with expense ",this.expense);
+   }
 }
 
 const name = 'expenseCard';
 
 export default angular.module(name, [
    angularMeteor,
-   DisplayNameFilter
+   DisplayNameFilter,
+   ExpenseCardContribution
 ]).component(name, {
    template: template,
    bindings: {

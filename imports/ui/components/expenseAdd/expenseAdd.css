@@ -12,14 +12,29 @@
     padding-left: 5px;
     padding-right: 5px;
     margin-bottom: 5px;
+    padding-top: 0;
 }
 
 #expenseAdd-cost-label {
     padding-left: 5px;
     padding-right: 5px;
+    padding-bottom: 0;
 }
 
 .center-line {
     height: 34px;
     line-height: 34px;
+}
+
+#excludeSelfCbx {
+    border-width: 0;
+    background-color: #ecf5f9;
+}
+
+#excludeSelfCbx .checkbox .checkbox-icon:before {
+    border-color: #999999;
+}
+
+#excludeSelfCbx .checkbox input:checked + .checkbox-icon:before {
+    border-color: #387ef5;
 }

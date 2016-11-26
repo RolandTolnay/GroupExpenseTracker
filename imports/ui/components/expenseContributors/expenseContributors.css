@@ -3,3 +3,8 @@
     font-size: small;
     text-align: center;
 }
+
+#contributorCbx {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}

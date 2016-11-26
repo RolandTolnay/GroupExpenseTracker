@@ -2,7 +2,7 @@ import _ from 'underscore';
 import { Meteor } from 'meteor/meteor';
 import { Debts } from './collection';
 
-export function debtFromPayment(expense, contributors) {
+export function debtFromPayment(expense, contributors, excludeSelf) {
    if (!this.userId) {
       throw new Meteor.Error(400, 'You have to be logged in!');
    }
@@ -11,11 +11,16 @@ export function debtFromPayment(expense, contributors) {
       throw new Meteor.Error(404, 'No expense found!');
    }
 
-   var amount = expense.cost / (_.size(contributors) + 1);
+   var amount = 0;
+   if (excludeSelf) {
+      amount = expense.cost / _.size(contributors);
+   } else {
+      amount = expense.cost / (_.size(contributors) + 1);
+   }
    amount = Math.ceil(amount * 10) / 10;
    for (var property in contributors) {
       if (contributors.hasOwnProperty(property)) {
-         createDebt(property,amount,expense);
+         createDebt(property, amount, expense);
       }
    }
 }
@@ -33,7 +38,7 @@ function createDebt(debtorId, amount, expense) {
 }
 
 export function setDebtsStatus(debtsSelector, status) {
-   console.log('Setting debt status for selector',debtsSelector,' to status',status);
+   console.log('Setting debt status for selector', debtsSelector, ' to status', status);
    Debts.update({ $or: debtsSelector }, {
       $set: {
          status: status
@@ -59,7 +64,7 @@ export function approvePendingDebt(debtor) {
          }, {
             status: 'pending'
          }]
-      },{
+      }, {
          $and: [{
             creditor: debtor
          }, {
@@ -93,7 +98,7 @@ export function rejectPendingDebt(debtor) {
          }, {
             status: 'pending'
          }]
-      },{
+      }, {
          $and: [{
             creditor: debtor
          }, {

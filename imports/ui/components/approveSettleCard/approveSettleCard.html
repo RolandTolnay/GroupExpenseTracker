@@ -1,21 +1,24 @@
 <div class="card vertical-margin"
-        ng-if="approveSettleCard.showCard()">
+     ng-if="approveSettleCard.showCard()">
     <div class="item item-text-wrap"
-         style="padding: 5px 5px 5px 10px">
-        <div class="row">
+         style="padding: 5px 5px 5px 5px">
+        <div class="row"
+             style="padding-left: 0;">
             <div class="approveSettleCard-desc-col">
                 <span>Approve <b>{{ approveSettleCard.approvableAmount() }} RON</b> from
                 <b>{{ approveSettleCard.debtorUser | displayNameFilter }}</b></span>
             </div>
             <div class="approveSettleCard-approve-col">
-                <button class="button button-balanced"
-                        style="width: 95%;"
+                <button id="approveSettleBtn"
+                        class="button button-balanced"
+                        style="width: 97%;"
                         ng-click="approveSettleCard.approveSettlement()">
                     Approve
                 </button>
             </div>
             <div class="approveSettleCard-decline-col">
-                <button class="button icon ion-ios-close-outline"
+                <button id="rejectSettleBtn"
+                        class="button icon ion-ios-close-outline"
                         ng-click="approveSettleCard.rejectSettlement()"></button>
             </div>
         </div>

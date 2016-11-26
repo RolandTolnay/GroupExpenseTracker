@@ -59,9 +59,8 @@ class ApproveSettleCard {
 
    showCard() {
       var isShown;
-      console.log('this.pendingDebts',this.pendingDebts);
       if (this.pendingDebts && _.size(this.pendingDebts) != 0) {
-         isShown = this.amount > this.pendingDebts[0].amount;
+         isShown = this.amount >= this.pendingDebts[0].amount;
       } else {
          isShown = true;
       }

@@ -1,7 +1,7 @@
 import { Meteor } from 'meteor/meteor';
 
 if (Meteor.isServer) {
-   Meteor.publish('users', function() {
+   Meteor.publish('users', function () {
       return Meteor.users.find({}, {
          fields: {
             username: 1,
@@ -10,3 +10,7 @@ if (Meteor.isServer) {
       });
    });
 }
+
+Accounts.config({
+   forbidClientAccountCreation: true
+});
