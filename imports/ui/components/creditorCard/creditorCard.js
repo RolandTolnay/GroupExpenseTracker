@@ -29,6 +29,7 @@ class CreditorCard {
          }]
       }).fetch();
       if (debts && _.size(debts) != 0) {
+         this.totalCredits = 0;
          this.hasCredit = true;
          this.debtors = {};
          _.each(debts, (debt) => {
