@@ -7,3 +7,7 @@
         padding-bottom: 0;
     }
 }
+
+#debtorCard {
+    box-shadow: 0 3px 10px rgba(102, 0, 0, 0.5);
+}

@@ -1,6 +1,7 @@
 .debtDetailCard-expense-row {
     margin-left: 15px;
-    font-style: italic;
+    margin-right: 15px;
+    /*font-style: italic;*/
 }
 
 #debtDetailCard-settleDebtsBtn {

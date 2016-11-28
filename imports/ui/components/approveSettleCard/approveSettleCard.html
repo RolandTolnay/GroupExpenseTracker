@@ -1,7 +1,9 @@
 <div class="card vertical-margin"
-     ng-if="approveSettleCard.showCard()">
+     ng-if="approveSettleCard.showCard()"
+     style="box-shadow: 0 3px 10px rgba(0, 102, 0, 0.3);">
     <div class="item item-text-wrap"
-         style="padding: 5px 5px 5px 5px">
+         style="padding: 5px 5px 5px 5px;
+         border: 1px solid #006600">
         <div class="row"
              style="padding-left: 0;">
             <div class="approveSettleCard-desc-col">
@@ -11,7 +13,8 @@
             <div class="approveSettleCard-approve-col">
                 <button id="approveSettleBtn"
                         class="button button-balanced"
-                        style="width: 97%;"
+                        style="width: 97%;
+                               border: 1px solid #006600;"
                         ng-click="approveSettleCard.approveSettlement()">
                     Approve
                 </button>
@@ -19,7 +22,8 @@
             <div class="approveSettleCard-decline-col">
                 <button id="rejectSettleBtn"
                         class="button icon ion-ios-close-outline"
-                        ng-click="approveSettleCard.rejectSettlement()"></button>
+                        ng-click="approveSettleCard.rejectSettlement()"
+                        style="border: 1px solid #afb8bc;"></button>
             </div>
         </div>
     </div>

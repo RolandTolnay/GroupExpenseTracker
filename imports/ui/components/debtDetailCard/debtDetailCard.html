@@ -1,5 +1,6 @@
 <div class="card vertical-margin">
-    <div class="item item-text-wrap card-padding-smallScrn">
+    <div class="item item-text-wrap card-padding-smallScrn"
+        style="border: 2px solid #b1d7e7;">
         <div class="col" style="padding-bottom: 0px;">
             <div class="row" style="margin-bottom: 10px">
                 with&nbsp;
@@ -8,26 +9,35 @@
                 </b>
             </div>
             <div class="row"
-                 style="margin-bottom: 5px;
-                 border-top: 1px solid #afb8bc;
+                 style="margin-bottom: 10px;
+                 border: 1px solid #660000;
                  background-color: #ffd6cc">
                 <span>You pay&nbsp;<b>{{ debtDetailCard.totalDebtAmount() }} RON</b>&nbsp;for expenses:</span>
             </div>
             <div class="row debtDetailCard-expense-row"
                  ng-repeat="debt in debtDetailCard.debts">
-                {{ debt.expense.description }}
-                - {{ debt.amount }} RON
+                <div class="col">
+                    {{ debt.expense.description }}
+                </div>
+                <div class="col">
+                    {{ debt.amount }} RON
+                </div>
             </div>
             <div class="row"
                  style="margin-top: 10px;
-                 margin-bottom: 5px;
-                 border-top: 1px solid #afb8bc;
-                 background-color: #b3ffb3">
+                 margin-bottom: 10px;
+                 border: 1px solid #006600;
+                 background-color: #98e698">
                 <span>You receive&nbsp;<b>{{ debtDetailCard.totalCreditAmount() }} RON</b>&nbsp;for expenses:</span>
             </div>
             <div class="row debtDetailCard-expense-row"
                  ng-repeat="debt in debtDetailCard.credits">
-                {{ debt.expense.description }} - {{ debt.amount }} RON
+                <div class="col">
+                    {{ debt.expense.description }}
+                </div>
+                <div class="col">
+                    {{ debt.amount }} RON
+                </div>
             </div>
             <div class="row"
                  style="padding-bottom: 0px;                 "
@@ -38,7 +48,7 @@
             </div>
             <div class="row"
                  ng-if="debtDetailCard.totalDebtAmount() >= debtDetailCard.totalCreditAmount()"
-            style="padding-bottom: 0px">
+                 style="padding-bottom: 0px">
                 <button id="debtDetailCard-settleDebtsBtn"
                         class="button button-block button-assertive"
                         ng-click="debtDetailCard.settleDebts()"
