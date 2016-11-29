@@ -4,17 +4,42 @@
     /*font-style: italic;*/
 }
 
+@media (max-width: 414px) {
+    .debtDetailCard-expense-row {
+        margin-left: 25px;
+        margin-right: 15px;
+        overflow:hidden;
+        word-wrap: break-word;
+        text-overflow: clip;
+        /*font-style: italic;*/
+    }
+}
+
+@media (min-width: 414px) {
+    .debtDetailCard-expense-row {
+        margin-left: 15px;
+        margin-right: 15px;
+        overflow:hidden;
+        white-space:nowrap;
+        text-overflow: ellipsis;
+
+        /*font-style: italic;*/
+    }
+}
+
 #debtDetailCard-settleDebtsBtn {
     font-size: 1.1em;
     min-height: 44px;
     line-height: 39px;
+    border: 1px solid #d41e11
+
 }
 
 #remainingDebtRow {
-    margin-top: 13px;
     margin-bottom: 10px;
     border-top: 1px solid #afb8bc;
     text-align: center;
     width: 100%;
-    font-size: 1.1em;
+    font-size: 1.2em;
+    padding-top: 5px;
 }
