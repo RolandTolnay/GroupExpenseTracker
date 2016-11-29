@@ -35,6 +35,7 @@ class ExpenseAdd {
       if (this.expense.cost && this.expense.description && this.isNumber(this.expense.cost)) {
          this.expense.creditor = Meteor.userId();
          this.expense.createdAt = new Date();
+         this.expense.cost.replace(/ RON/, '');
 
          this.filterContributors();
 
@@ -64,6 +65,11 @@ class ExpenseAdd {
    isNumber(n) {
       return !isNaN(parseFloat(n)) && isFinite(n);
    }
+
+   //costChanged() {
+   //   this.expense.cost.replace(/ RON/g, '');
+   //   this.expense.cost = this.expense.cost + ' RON';
+   //}
 }
 
 const name = 'expenseAdd';

@@ -1,3 +1,7 @@
 .creditorCard-background {
-    background-color: #b3ffb3;
+    background-color: #98e698;
+}
+
+#creditorCard {
+    box-shadow: 0 3px 10px rgba(0, 102, 0, 0.5);
 }

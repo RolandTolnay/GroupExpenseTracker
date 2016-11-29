@@ -14,36 +14,37 @@
                 <label id="expenseAdd-cost-label"
                        class="item item-input item-floating-label no-border">
                     <span class="input-label">Cost</span>
-                    <div class="row"
-                         style="width: 50%;
-                         padding-left: 0px;">
+                    <div class="row dashed-bottom-border"
+                         style="padding-top: 0;
+                                padding-left: 0px;">
                         <input type="text" placeholder="Cost"
-                               style="border: 1px solid #afb8bc;
-                                      border-radius: 5px;
-                                      padding-left: 5px;
-                                      margin-right: 5px;"
+                               style="padding-left: 5px;
+                                      margin-right: 5px;
+                                      font-size: 1.5em;
+                                      color: #006600;"
                                ng-model="expenseAdd.expense.cost">
-                        <span class="label center-line"><b>RON</b></span>
+                        <span class="label center-line" style="font-size: 1.2em"><b>RON</b></span>
                     </div>
                 </label>
                 <label id="expenseAdd-description-label"
                        class="item item-input item-floating-label no-border">
                     <span class="input-label">Description</span>
-                <textarea placeholder="Description"
-                          ng-model="expenseAdd.expense.description"
-                          class="background-color thin-border"
-                          style="margin-top: 5px;"
-                          rows="3" cols="1">
-                </textarea>
+                    <input type="text"
+                           placeholder="Description"
+                           ng-model="expenseAdd.expense.description"
+                           class="background-color dashed-bottom-border"
+                           style="font-size: 1.5em; color: #006600; margin-bottom: 20px; padding-left: 5px;">
+                    </input>
                 </label>
                 <expense-contributors contributors="expenseAdd.contributors"></expense-contributors>
                 <ion-checkbox id="excludeSelfCbx"
                               ng-model="expenseAdd.excludeSelf"
-                                style="padding-top: 10px;">
+                              style="">
                     Exclude myself from this expense
                 </ion-checkbox>
-                <div class="padding" style="margin-top: 10px;">
+                <div class="padding" style="margin-top: 0">
                     <button class="button button-block button-positive"
+                            style="border: 1px solid #0b57da;"
                             ng-click="expenseAdd.addNewExpense()">
                         Add expense
                     </button>

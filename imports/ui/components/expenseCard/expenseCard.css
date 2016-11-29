@@ -20,7 +20,7 @@
 }
 
 .card {
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 5px 10px rgba(177, 215, 231, 1);
 }
 
 @media (max-width: 414px) {

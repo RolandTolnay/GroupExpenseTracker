@@ -1,10 +1,34 @@
 #contributors-description {
     color: #afb8bc;
-    font-size: small;
+    font-size: 1.1em;
     text-align: center;
+    line-height: 130%;
+    margin-top: 3px;
 }
 
 #contributorCbx {
     padding-top: 10px;
     padding-bottom: 10px;
+}
+
+#contributor-card {
+    box-shadow: 0 3px 10px rgba(0, 102, 0, 0.5);
+    width: 75%;
+    margin: auto;
+    border: 1px solid #006600;
+}
+
+#contributors-label {
+    font-size: 1.4em;
+    margin-bottom: 7px;
+    margin-top: 5px;
+    width: 100%;
+    text-align: center;
+    color: #006600;
+    font-weight: 600;
+}
+
+#contributorCbx .checkbox input:checked + .checkbox-icon:before {
+    border-color: #006600;
+    background: #006600;
 }

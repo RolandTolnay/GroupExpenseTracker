@@ -94,6 +94,7 @@ class ExpenseCardContribution {
    }
 
    updateDisplayText() {
+      this.borderColor = '#3c9bc3';
       if (this.noContribution()) {
          this.backgroundColor = '#b1d7e7';
          this.displayText = "You have no contribution in this expense.";
@@ -102,15 +103,18 @@ class ExpenseCardContribution {
          this.displayText = "You have contributed " + this.debt.amount + " RON to this expense.";
       } else if (this.unsettledDebt()) {
          this.backgroundColor = '#ffd6cc';
+         this.borderColor = '#660000';
          this.displayText = "You have to pay " + this.debt.amount + " RON for this expense.";
       } else if (this.pendingDebt()) {
          this.backgroundColor = '#E0D6D7';
+         this.borderColor = '#E0D6D7';
          this.displayText = "Your contribution is pending approval...";
       } else if (this.settledCredit()) {
          this.backgroundColor = '#b1d7e7';
          this.displayText = "Everyone has paid their contribution.";
       } else if (this.unsettledCredit()) {
-         this.backgroundColor = '#b3ffb3';
+         this.backgroundColor = '#98e698';
+         this.borderColor = '#006600';
          this.displayText = "You will receive "+this.unsettledCredits[0].amount+" RON from ";
          _.each(this.unsettledCredits, (credit) => {
             var user = this.userFromId(credit.debtor);

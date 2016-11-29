@@ -1,14 +1,21 @@
-<div style="font-size: 1.35em; margin-bottom: 10px;">
-    Contributors:
-</div>
-<ion-list style="margin-top: 5px">
-    <ion-checkbox id="contributorCbx"
-                    ng-repeat="user in expenseContributors.users"
-                  ng-model="expenseContributors.contributors[user._id]"
-                  ng-change="expenseContributors.printContributors()"  >
-        {{ user | displayNameFilter }}
-    </ion-checkbox>
-</ion-list>
-<div id="contributors-description">
-    The cost of the expense will be shared evenly between you and contributors.
+<div id="contributor-card">
+    <div id="contributors-label" style="">
+        Contributors:
+    </div>
+    <div style="width: 95%; margin: auto; padding: 5px;">
+        <ion-list>
+            <ion-checkbox id="contributorCbx"
+                          class="background-color"
+                          ng-repeat="user in expenseContributors.users"
+                          ng-model="expenseContributors.contributors[user._id]"
+                          ng-change="expenseContributors.printContributors()"  >
+                {{ user | displayNameFilter }}
+            </ion-checkbox>
+        </ion-list>
+
+        <div id="contributors-description">
+            The cost of the expense will be shared evenly between you and contributors.
+        </div>
+    </div>
+
 </div>
