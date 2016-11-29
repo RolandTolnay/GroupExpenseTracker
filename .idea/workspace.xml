@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="83696186-400f-49bd-b279-8513aa437522" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+<<<<<<< Updated upstream
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/imports/ui/components/debtDetailCard/debtDetailCard.css" afterPath="$PROJECT_DIR$/imports/ui/components/debtDetailCard/debtDetailCard.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/imports/ui/components/debtDetailCard/debtDetailCard.html" afterPath="$PROJECT_DIR$/imports/ui/components/debtDetailCard/debtDetailCard.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/imports/ui/components/expenseAdd/expenseAdd.css" afterPath="$PROJECT_DIR$/imports/ui/components/expenseAdd/expenseAdd.css" />
@@ -11,6 +12,8 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/imports/ui/components/expenseContributors/expenseContributors.css" afterPath="$PROJECT_DIR$/imports/ui/components/expenseContributors/expenseContributors.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/imports/ui/components/expenseContributors/expenseContributors.html" afterPath="$PROJECT_DIR$/imports/ui/components/expenseContributors/expenseContributors.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/imports/ui/components/settleDebts/settleDebtsButton.html" afterPath="$PROJECT_DIR$/imports/ui/components/settleDebts/settleDebtsButton.html" />
+=======
+>>>>>>> Stashed changes
     </list>
     <ignored path="GroupExpenseTracker.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -33,10 +36,16 @@
             <file leaf-file-name="debtorCard.html" pinned="false" current-in-tab="false">
               <entry file="file://$PROJECT_DIR$/imports/ui/components/debtorCard/debtorCard.html">
                 <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
                   <state vertical-scroll-proportion="-11.875">
                     <caret line="22" column="37" selection-start-line="22" selection-start-column="37" selection-end-line="22" selection-end-column="37" />
                     <folding>
                       <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+=======
+                  <state vertical-scroll-proportion="-11.25">
+                    <caret line="21" column="37" selection-start-line="21" selection-start-column="37" selection-end-line="21" selection-end-column="37" />
+                    <folding>
+>>>>>>> Stashed changes
                       <element signature="n#style#0;n#settle-debts#0;n#div#2;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
                     </folding>
                   </state>
@@ -46,8 +55,13 @@
             <file leaf-file-name="approveSettleCard.html" pinned="false" current-in-tab="false">
               <entry file="file://$PROJECT_DIR$/imports/ui/components/approveSettleCard/approveSettleCard.html">
                 <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
                   <state vertical-scroll-proportion="-14.375">
                     <caret line="25" column="57" selection-start-line="25" selection-start-column="57" selection-end-line="25" selection-end-column="57" />
+=======
+                  <state vertical-scroll-proportion="-13.125">
+                    <caret line="21" column="57" selection-start-line="21" selection-start-column="57" selection-end-line="21" selection-end-column="57" />
+>>>>>>> Stashed changes
                     <folding />
                   </state>
                 </provider>
@@ -66,10 +80,17 @@
             <file leaf-file-name="expenseCardContribution.html" pinned="false" current-in-tab="true">
               <entry file="file://$PROJECT_DIR$/imports/ui/components/expenseCardContribution/expenseCardContribution.html">
                 <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
                   <state vertical-scroll-proportion="0.050083473">
                     <caret line="2" column="42" selection-start-line="2" selection-start-column="42" selection-end-line="2" selection-end-column="42" />
                     <folding>
                       <marker date="1480292107000" expanded="true" signature="32:283" placeholder="{&quot;font-size&quot;: '1.15em'...}" />
+=======
+                  <state vertical-scroll-proportion="0.07512521">
+                    <caret line="3" column="42" selection-start-line="3" selection-start-column="42" selection-end-line="3" selection-end-column="42" />
+                    <folding>
+                      <marker date="1480386543000" expanded="true" signature="32:343" placeholder="{&quot;font-size&quot;: '1.15em'...}" />
+>>>>>>> Stashed changes
                     </folding>
                   </state>
                 </provider>
@@ -107,8 +128,13 @@
       <file leaf-file-name="expenseAdd.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/imports/ui/components/expenseAdd/expenseAdd.css">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
             <state vertical-scroll-proportion="0.9003322">
               <caret line="63" column="1" selection-start-line="63" selection-start-column="1" selection-end-line="63" selection-end-column="1" />
+=======
+            <state vertical-scroll-proportion="0.9033333">
+              <caret line="39" column="1" selection-start-line="39" selection-start-column="1" selection-end-line="39" selection-end-column="1" />
+>>>>>>> Stashed changes
               <folding />
             </state>
           </provider>
@@ -117,6 +143,7 @@
       <file leaf-file-name="debtDetailCard.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/imports/ui/components/debtDetailCard/debtDetailCard.html">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
             <state vertical-scroll-proportion="-6.25">
               <caret line="10" column="33" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="33" />
               <folding>
@@ -128,6 +155,16 @@
                 <element signature="n#style#0;n#span#0;n#span#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#1;n#div#3;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+=======
+            <state vertical-scroll-proportion="-1.875">
+              <caret line="3" column="33" selection-start-line="3" selection-start-column="33" selection-end-line="3" selection-end-column="33" />
+              <folding>
+                <marker date="1480386543000" expanded="true" signature="1951:2723" placeholder="..." />
+                <marker date="1480386543000" expanded="false" signature="1970:1989" placeholder="..." />
+                <marker date="1480386543000" expanded="true" signature="2050:2343" placeholder="..." />
+                <marker date="1480386543000" expanded="true" signature="2470:2708" placeholder="..." />
+                <marker date="1480386543000" expanded="false" signature="2495:2511" placeholder="..." />
+>>>>>>> Stashed changes
               </folding>
             </state>
           </provider>
@@ -147,10 +184,15 @@
         <entry file="file://$PROJECT_DIR$/imports/ui/components/expenseContributors/expenseContributors.html">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="-0.625">
+<<<<<<< Updated upstream
               <caret line="1" column="40" selection-start-line="1" selection-start-column="40" selection-end-line="1" selection-end-column="40" />
               <folding>
                 <element signature="n#style#0;n#div#1;n#div#0;n#!!top" expanded="true" />
               </folding>
+=======
+              <caret line="1" column="17" selection-start-line="1" selection-start-column="17" selection-end-line="1" selection-end-column="17" />
+              <folding />
+>>>>>>> Stashed changes
             </state>
           </provider>
         </entry>
@@ -158,9 +200,17 @@
       <file leaf-file-name="expenseContributors.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/imports/ui/components/expenseContributors/expenseContributors.css">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
             <state vertical-scroll-proportion="-20.0">
               <caret line="32" column="24" selection-start-line="32" selection-start-column="24" selection-end-line="32" selection-end-column="24" />
               <folding />
+=======
+            <state vertical-scroll-proportion="-5.0">
+              <caret line="8" column="24" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
+              <folding>
+                <marker date="1480386543000" expanded="true" signature="26:63" placeholder="{...}" />
+              </folding>
+>>>>>>> Stashed changes
             </state>
           </provider>
         </entry>
@@ -168,6 +218,7 @@
       <file leaf-file-name="expenseAddModal.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/imports/ui/components/expenseAdd/expenseAddModal.html">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
             <state vertical-scroll-proportion="-18.125">
               <caret line="44" column="57" selection-start-line="44" selection-start-column="57" selection-end-line="44" selection-end-column="57" />
               <folding>
@@ -178,6 +229,11 @@
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#ion-content#0;n#ion-modal-view#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#button#0;n#div#0;n#div#0;n#div#0;n#ion-content#0;n#ion-modal-view#0;n#!!top" expanded="true" />
               </folding>
+=======
+            <state vertical-scroll-proportion="-17.5">
+              <caret line="43" column="31" selection-start-line="43" selection-start-column="31" selection-end-line="43" selection-end-column="31" />
+              <folding />
+>>>>>>> Stashed changes
             </state>
           </provider>
         </entry>
@@ -186,8 +242,15 @@
         <entry file="file://$PROJECT_DIR$/imports/ui/components/expenseCardContribution/expenseCardContribution.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
+<<<<<<< Updated upstream
               <caret line="96" column="33" selection-start-line="96" selection-start-column="26" selection-end-line="96" selection-end-column="33" />
               <folding />
+=======
+              <caret line="92" column="9" selection-start-line="92" selection-start-column="9" selection-end-line="92" selection-end-column="9" />
+              <folding>
+                <marker date="1480386543000" expanded="true" signature="3447:4093" placeholder="{...}" />
+              </folding>
+>>>>>>> Stashed changes
             </state>
           </provider>
         </entry>
@@ -196,10 +259,15 @@
         <entry file="file://$PROJECT_DIR$/imports/ui/components/settleDebts/settleDebtsButton.html">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="-1.875">
+<<<<<<< Updated upstream
               <caret line="3" column="12" selection-start-line="3" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
               <folding>
                 <element signature="n#style#0;n#button#0;n#div#0;n#!!top" expanded="true" />
               </folding>
+=======
+              <caret line="3" column="12" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="12" />
+              <folding />
+>>>>>>> Stashed changes
             </state>
           </provider>
         </entry>
@@ -207,9 +275,17 @@
       <file leaf-file-name="debtDetailCard.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/imports/ui/components/debtDetailCard/debtDetailCard.css">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
             <state vertical-scroll-proportion="-7.5">
               <caret line="12" column="28" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
               <folding />
+=======
+            <state vertical-scroll-proportion="-1.875">
+              <caret line="3" column="1" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
+              <folding>
+                <marker date="1480386543000" expanded="true" signature="28:57" placeholder="{...}" />
+              </folding>
+>>>>>>> Stashed changes
             </state>
           </provider>
         </entry>
@@ -811,7 +887,17 @@
       <option name="project" value="LOCAL" />
       <updated>1480293933086</updated>
     </task>
+<<<<<<< Updated upstream
     <option name="localTasksCounter" value="11" />
+=======
+    <task id="LOCAL-00011" summary="Partial UI redesign of the expenseAdd modal&#10;Various small UI tweaks to fonts, colors and borders">
+      <created>1480386519899</created>
+      <option name="number" value="00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1480386519899</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
+>>>>>>> Stashed changes
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -820,17 +906,21 @@
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24117205" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32951945" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+<<<<<<< Updated upstream
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25342464" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+=======
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25400457" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+>>>>>>> Stashed changes
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34439358" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -861,7 +951,12 @@
     <MESSAGE value="ApproveSettleCard now properly shows actual amount paid." />
     <MESSAGE value="expenseCardContribution template added" />
     <MESSAGE value="Added borders to various UI elements" />
+<<<<<<< Updated upstream
     <option name="LAST_COMMIT_MESSAGE" value="Added borders to various UI elements" />
+=======
+    <MESSAGE value="Partial UI redesign of the expenseAdd modal&#10;Various small UI tweaks to fonts, colors and borders" />
+    <option name="LAST_COMMIT_MESSAGE" value="Partial UI redesign of the expenseAdd modal&#10;Various small UI tweaks to fonts, colors and borders" />
+>>>>>>> Stashed changes
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1123,8 +1218,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/imports/ui/components/approveSettleCard/approveSettleCard.html">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
         <state vertical-scroll-proportion="-14.375">
           <caret line="25" column="57" selection-start-line="25" selection-start-column="57" selection-end-line="25" selection-end-column="57" />
+=======
+        <state vertical-scroll-proportion="-13.125">
+          <caret line="21" column="57" selection-start-line="21" selection-start-column="57" selection-end-line="21" selection-end-column="57" />
+>>>>>>> Stashed changes
           <folding />
         </state>
       </provider>
@@ -1163,10 +1263,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/imports/ui/components/debtorCard/debtorCard.html">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
         <state vertical-scroll-proportion="-11.875">
           <caret line="22" column="37" selection-start-line="22" selection-start-column="37" selection-end-line="22" selection-end-column="37" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+=======
+        <state vertical-scroll-proportion="-11.25">
+          <caret line="21" column="37" selection-start-line="21" selection-start-column="37" selection-end-line="21" selection-end-column="37" />
+          <folding>
+>>>>>>> Stashed changes
             <element signature="n#style#0;n#settle-debts#0;n#div#2;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
           </folding>
         </state>
@@ -1176,6 +1282,17 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-9.916667">
           <caret line="8731" column="29" selection-start-line="8731" selection-start-column="22" selection-end-line="8731" selection-end-column="29" />
+<<<<<<< Updated upstream
+=======
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/imports/ui/components/settleDebts/settleDebtsButton.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.875">
+          <caret line="3" column="12" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="12" />
+>>>>>>> Stashed changes
           <folding />
         </state>
       </provider>
@@ -1192,10 +1309,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/imports/ui/components/expenseCardContribution/expenseCardContribution.html">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
         <state vertical-scroll-proportion="0.050083473">
           <caret line="2" column="42" selection-start-line="2" selection-start-column="42" selection-end-line="2" selection-end-column="42" />
           <folding>
             <marker date="1480292107000" expanded="true" signature="32:283" placeholder="{&quot;font-size&quot;: '1.15em'...}" />
+=======
+        <state vertical-scroll-proportion="0.07512521">
+          <caret line="3" column="42" selection-start-line="3" selection-start-column="42" selection-end-line="3" selection-end-column="42" />
+          <folding>
+            <marker date="1480386543000" expanded="true" signature="32:343" placeholder="{&quot;font-size&quot;: '1.15em'...}" />
           </folding>
         </state>
       </provider>
@@ -1203,27 +1326,94 @@
     <entry file="file://$PROJECT_DIR$/imports/ui/components/expenseCardContribution/expenseCardContribution.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="96" column="33" selection-start-line="96" selection-start-column="26" selection-end-line="96" selection-end-column="33" />
-          <folding />
+          <caret line="92" column="9" selection-start-line="92" selection-start-column="9" selection-end-line="92" selection-end-column="9" />
+          <folding>
+            <marker date="1480386543000" expanded="true" signature="3447:4093" placeholder="{...}" />
+>>>>>>> Stashed changes
+          </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< Updated upstream
+    <entry file="file://$PROJECT_DIR$/imports/ui/components/expenseCardContribution/expenseCardContribution.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="96" column="33" selection-start-line="96" selection-start-column="26" selection-end-line="96" selection-end-column="33" />
+=======
     <entry file="file://$PROJECT_DIR$/imports/ui/components/expenseAdd/expenseAddButton.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.625">
           <caret line="1" column="10" selection-start-line="1" selection-start-column="10" selection-end-line="1" selection-end-column="10" />
+>>>>>>> Stashed changes
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< Updated upstream
+    <entry file="file://$PROJECT_DIR$/imports/ui/components/expenseAdd/expenseAddButton.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.625">
+          <caret line="1" column="10" selection-start-line="1" selection-start-column="10" selection-end-line="1" selection-end-column="10" />
+=======
+    <entry file="file://$PROJECT_DIR$/imports/ui/components/debtDetailCard/debtDetailCard.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.875">
+          <caret line="3" column="1" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
+          <folding>
+            <marker date="1480386543000" expanded="true" signature="28:57" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/imports/ui/components/debtDetailCard/debtDetailCard.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.875">
+          <caret line="3" column="33" selection-start-line="3" selection-start-column="33" selection-end-line="3" selection-end-column="33" />
+          <folding>
+            <marker date="1480386543000" expanded="true" signature="1951:2723" placeholder="..." />
+            <marker date="1480386543000" expanded="false" signature="1970:1989" placeholder="..." />
+            <marker date="1480386543000" expanded="true" signature="2050:2343" placeholder="..." />
+            <marker date="1480386543000" expanded="true" signature="2470:2708" placeholder="..." />
+            <marker date="1480386543000" expanded="false" signature="2495:2511" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/imports/ui/components/expenseAdd/expenseAddModal.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-17.5">
+          <caret line="43" column="31" selection-start-line="43" selection-start-column="31" selection-end-line="43" selection-end-column="31" />
+>>>>>>> Stashed changes
+          <folding />
+        </state>
+      </provider>
+    </entry>
+<<<<<<< Updated upstream
     <entry file="file://$PROJECT_DIR$/imports/ui/components/debtDetailCard/debtDetailCard.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-7.5">
           <caret line="12" column="28" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
+=======
+    <entry file="file://$PROJECT_DIR$/imports/ui/components/expenseContributors/expenseContributors.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.0">
+          <caret line="8" column="24" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
+          <folding>
+            <marker date="1480386543000" expanded="true" signature="26:63" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/imports/ui/components/expenseContributors/expenseContributors.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.625">
+          <caret line="1" column="17" selection-start-line="1" selection-start-column="17" selection-end-line="1" selection-end-column="17" />
+>>>>>>> Stashed changes
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< Updated upstream
     <entry file="file://$PROJECT_DIR$/imports/ui/components/debtDetailCard/debtDetailCard.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-6.25">
@@ -1278,6 +1468,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.9003322">
           <caret line="63" column="1" selection-start-line="63" selection-start-column="1" selection-end-line="63" selection-end-column="1" />
+=======
+    <entry file="file://$PROJECT_DIR$/imports/ui/components/expenseAdd/expenseAdd.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.9033333">
+          <caret line="39" column="1" selection-start-line="39" selection-start-column="1" selection-end-line="39" selection-end-column="1" />
+>>>>>>> Stashed changes
           <folding />
         </state>
       </provider>
