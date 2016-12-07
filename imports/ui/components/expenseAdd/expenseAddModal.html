@@ -11,6 +11,16 @@
     <ion-content class="background-color">
         <div class="list">
             <div class="padding" style="padding-top: 0; padding-bottom: 0;">
+                <label id="expenseAdd-description-label"
+                       class="item item-input item-floating-label no-border">
+                    <span class="input-label">Description</span>
+                    <input type="text"
+                           placeholder="Description"
+                           ng-model="expenseAdd.expense.description"
+                           class="background-color dashed-bottom-border"
+                           style="font-size: 1.5em; color: #006600; margin-bottom: 20px; padding-left: 5px;">
+                    </input>
+                </label>
                 <label id="expenseAdd-cost-label"
                        class="item item-input item-floating-label no-border">
                     <span class="input-label">Cost</span>
@@ -25,16 +35,6 @@
                                ng-model="expenseAdd.expense.cost">
                         <span class="label center-line" style="font-size: 1.2em"><b>RON</b></span>
                     </div>
-                </label>
-                <label id="expenseAdd-description-label"
-                       class="item item-input item-floating-label no-border">
-                    <span class="input-label">Description</span>
-                    <input type="text"
-                           placeholder="Description"
-                           ng-model="expenseAdd.expense.description"
-                           class="background-color dashed-bottom-border"
-                           style="font-size: 1.5em; color: #006600; margin-bottom: 20px; padding-left: 5px;">
-                    </input>
                 </label>
                 <expense-contributors contributors="expenseAdd.contributors"></expense-contributors>
                 <ion-checkbox id="excludeSelfCbx"
