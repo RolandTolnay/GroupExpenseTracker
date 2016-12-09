@@ -14,11 +14,12 @@ class ExpenseAdd {
    constructor($ionicModal, $scope) {
       'ngInject';
 
+      this.reset();
       this.modal = $ionicModal.fromTemplate(modalTemplate, {
          scope: $scope,
          animation: 'slide-in-up'
       });
-      this.reset();
+
    }
 
    openModal() {
@@ -60,10 +61,26 @@ class ExpenseAdd {
 
    reset() {
       this.expense = {};
+      this.descriptionStyle = {};
+      this.descriptionStyle['width'] = '65%';
+      this.descriptionStyle['font-size'] = '1.5em';
    }
 
    isNumber(n) {
       return !isNaN(parseFloat(n)) && isFinite(n);
+   }
+
+   descriptionChanged() {
+      console.log('change called', this.expense.description, this.descriptionWidth, this.expense.description.length);
+      if (this.expense.description.length > 14 && this.descriptionStyle['width'] === '65%') {
+         this.descriptionStyle['width'] = '98%';
+         this.descriptionStyle['font-size'] = '1.2em';
+         console.log('width 98');
+      } else if (this.expense.description.length <= 14 && this.descriptionStyle['width'] === '98%') {
+         this.descriptionStyle['width'] = '65%';
+         this.descriptionStyle['font-size'] = '1.5em';
+         console.log('width 65');
+      }
    }
 
    //costChanged() {

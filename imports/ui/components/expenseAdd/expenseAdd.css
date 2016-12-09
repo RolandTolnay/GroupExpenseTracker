@@ -11,8 +11,12 @@
 #expenseAdd-description-label {
     padding-left: 5px;
     padding-right: 5px;
+    padding-bottom: 0px;
     width: 65%;
     margin: auto;
+    margin-bottom: 10px;
+    -webkit-transition: width 1s; /* Safari */
+    transition: width 1s;
 }
 
 #expenseAdd-cost-label {
@@ -23,6 +27,7 @@
     color: #afb8bc;
     width: 65%;
     margin: auto;
+    margin-bottom: 20px;
 }
 
 .item-floating-label .input-label {

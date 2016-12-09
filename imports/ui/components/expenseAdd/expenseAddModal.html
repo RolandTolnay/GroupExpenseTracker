@@ -12,18 +12,21 @@
         <div class="list">
             <div class="padding" style="padding-top: 0; padding-bottom: 0;">
                 <label id="expenseAdd-description-label"
-                       class="item item-input item-floating-label no-border">
+                       class="item item-input item-floating-label no-border"
+                       ng-style="{'width':expenseAdd.descriptionStyle['width']}">
                     <span class="input-label">Description</span>
                     <input type="text"
                            placeholder="Description"
                            ng-model="expenseAdd.expense.description"
                            class="background-color dashed-bottom-border"
-                           style="font-size: 1.5em; color: #006600; margin-bottom: 20px; padding-left: 5px;">
+                           style="color: #006600; padding-left: 5px; padding-right: 5px; width: 100%; transition: font 0.5s ease;"
+                           ng-style="{'font-size':expenseAdd.descriptionStyle['font-size']}"
+                           ng-change="expenseAdd.descriptionChanged()">
                     </input>
                 </label>
                 <label id="expenseAdd-cost-label"
                        class="item item-input item-floating-label no-border">
-                    <span class="input-label">Cost</span>
+                    <span class="input-label" style="padding-top: 0">Cost</span>
                     <div class="row dashed-bottom-border"
                          style="padding-top: 0;
                                 padding-left: 0px;">
