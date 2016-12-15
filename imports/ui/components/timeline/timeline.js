@@ -1,6 +1,7 @@
 import angular from 'angular';
 import angularMeteor from 'angular-meteor';
 import uiRouter from 'angular-ui-router';
+import { Counts } from 'meteor/tmeasday:publish-counts';
 
 import { Expenses } from '/imports/api/expenses';
 import { Debts } from '/imports/api/debts';
@@ -16,12 +17,23 @@ import { name as ApproveSettleCard } from '../approveSettleCard/approveSettleCar
 import './timeline.css';
 
 class Timeline {
-   constructor($scope, $reactive) {
+   constructor($scope, $reactive, $ionicScrollDelegate) {
       'ngInject';
 
       $reactive(this).attach($scope);
 
-      this.subscribe('expenses');
+      this.perPage = 12;
+      this.page = 1;
+
+      this.subscribe('expenses', () => [{
+         limit: parseInt(this.perPage * this.getReactively('page')),
+         sort: {
+            createdAt: -1
+         }
+      }], () => {
+         //When subscription ready and all data fetched
+         $scope.$broadcast('scroll.infiniteScrollComplete');
+      });
       this.subscribe('pendingCredits');
 
       this.helpers({
@@ -34,8 +46,27 @@ class Timeline {
          },
          pendingCredits() {
             return PendingCredits.find({});
+         },
+         expensesCount() {
+            return Counts.get('numberOfExpenses');
          }
       });
+
+      this.scrollToTop = () => {
+         console.log('Scroll to Top called');
+         $ionicScrollDelegate.scrollTop(true);
+      }
+   }
+
+   loadMoreExpenses() {
+      console.log('loadMoreExpenses called with page ', this.page);
+      if (this.moreExpensesToLoad()) {
+         this.page = this.page + 1;
+      }
+   }
+
+   moreExpensesToLoad() {
+      return (this.page * this.perPage) <= this.expensesCount;
    }
 }
 

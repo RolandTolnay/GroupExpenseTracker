@@ -7,3 +7,10 @@ login-buttons {
     margin-left: 10px;
     margin-top: 7px;
 }
+
+#spendishare-logo {
+    position: absolute;
+    right: 8px;
+    bottom: 12px;
+    color: #cccccc;
+}

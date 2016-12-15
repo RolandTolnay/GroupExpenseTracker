@@ -71,22 +71,14 @@ class ExpenseAdd {
    }
 
    descriptionChanged() {
-      console.log('change called', this.expense.description, this.descriptionWidth, this.expense.description.length);
       if (this.expense.description.length > 14 && this.descriptionStyle['width'] === '65%') {
          this.descriptionStyle['width'] = '98%';
          this.descriptionStyle['font-size'] = '1.2em';
-         console.log('width 98');
       } else if (this.expense.description.length <= 14 && this.descriptionStyle['width'] === '98%') {
          this.descriptionStyle['width'] = '65%';
          this.descriptionStyle['font-size'] = '1.5em';
-         console.log('width 65');
       }
    }
-
-   //costChanged() {
-   //   this.expense.cost.replace(/ RON/g, '');
-   //   this.expense.cost = this.expense.cost + ' RON';
-   //}
 }
 
 const name = 'expenseAdd';

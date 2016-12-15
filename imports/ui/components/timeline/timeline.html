@@ -1,5 +1,5 @@
 <div class="bar bar-subheader bar-calm" style="border: 1px solid #0badda; width: 100%">
-    <h1 class="title">Timeline</h1>
+    <h1 class="title" ng-click="timeline.scrollToTop()">Timeline</h1>
     <div class="buttons">
         <expense-add></expense-add>
     </div>
@@ -24,4 +24,9 @@
             <expense-card expense="expense" style="width: 100%"></expense-card>
         </div>
     </div>
+    <ion-infinite-scroll
+            ng-if="timeline.moreExpensesToLoad()"
+            on-infinite="timeline.loadMoreExpenses()"
+            distance="15%">
+    </ion-infinite-scroll>
 </ion-content>
