@@ -10,7 +10,3 @@ if (Meteor.isServer) {
       });
    });
 }
-
-Accounts.config({
-   forbidClientAccountCreation: true
-});
